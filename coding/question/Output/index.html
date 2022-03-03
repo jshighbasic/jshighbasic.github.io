@@ -17,11 +17,12 @@
 
 <body>
     <div class="question">
-        <h1>Sorting system</h1>
-        <c>Function creation</c>
+        <h1>Output system</h1>
+        <c>Function Creation</c>
         <hr>
         <p>
-            Sort an array of numbers from largest to smallest.
+            - Output a string : "hi".
+            <br>- Output the second value of the array.
             <br> variable: list, is an array.
         </p>
         <c>var list = [];</c>
@@ -33,16 +34,13 @@
         <p>
             The output should be:
         </p>
-        <c>[10,9,8,7,6,5,4,3,2,1]</c>
+        <c>"hi"</c>
+        <br><br>
+        <c>2</c>
         <p><i>Use console.log() to output the result.</i></p>
         <hr>
         <p>Tips</p>
         <div class="tip">
-            <p>
-                <i>
-                    The sort function can be used to sort a list in ascending order. However, the question asks to sort the list in descending order. Try think how to do that.
-                </i>
-            </p>
             <button onclick="open_tips(this)" class="tipsOn"><span class="material-icons-round" style="font-size: 24px !important;">visibility_off</span></button>
             <div class="tip" id="t1" style="display:none;">
                 <p>
@@ -53,8 +51,8 @@
                     </i>
                     <br>
                     <pre class="prettyprint"><code class="language-js">
-    list.sort(function(a,b){return b-a});
-    console.log(list);
+    console.log('hi');
+    console.log(list[1]);
     <code></pre>
                 </p>
             </div>
@@ -91,7 +89,7 @@
             `var list=[1,2,3,4,5,6,7,8,9,10];`,
             `var list=[50,40,952,812,64,2132,8469,5423,12,22,33];`,
         ];
-        const result = `[[90,80,70,60,50,40,30,20,15,10],[6454,900,555,500,112,100,55,50,33,22,20],[10,9,8,7,6,5,4,3,2,1],[8469,5423,2132,952,812,64,50,40,33,22,12]]`;
+        const result = `["hi",50,"hi",20,"hi",2,"hi",40]`;
         dt = '../../testScript.html'
         $('#submit').click(function() {
             if (location.href.includes('?')) {

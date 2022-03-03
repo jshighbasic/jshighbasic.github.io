@@ -17,33 +17,28 @@
 
 <body>
     <div class="question">
-        <h1>Sorting system</h1>
-        <c>Function creation</c>
+        <h1>Introduction</h1>
+        <c>Tutorial</c>
         <hr>
         <p>
-            Sort an array of numbers from largest to smallest.
-            <br> variable: list, is an array.
+            In this tutorial, we will learn how to use jshighbasic to code and answer JavaScript questions.
         </p>
-        <c>var list = [];</c>
+        <c>&copy; Xchuangc, 2022. All Rights Reserved.</c>
         <hr>
         <p>
-            For example:
+            This is a code block: 
         </p>
-        <c>var list = [1,2,3,4,5,6,7,8,9,10];</c>
-        <p>
-            The output should be:
-        </p>
-        <c>[10,9,8,7,6,5,4,3,2,1]</c>
-        <p><i>Use console.log() to output the result.</i></p>
+        <pre class="prettyprint"><code class="language-javascript">
+    var a = 1;
+    var b = 2;
+    var c = a + b;
+    console.log(c);</code>
+        </pre>
+        <c>Prettyprint from google.</c>
         <hr>
-        <p>Tips</p>
+        <p>Tips</p><p><i>Here's a hint.</i></p>
         <div class="tip">
-            <p>
-                <i>
-                    The sort function can be used to sort a list in ascending order. However, the question asks to sort the list in descending order. Try think how to do that.
-                </i>
-            </p>
-            <button onclick="open_tips(this)" class="tipsOn"><span class="material-icons-round" style="font-size: 24px !important;">visibility_off</span></button>
+            <button onclick="open_tips(this)" class="tipsOn"><span class="material-icons-round" style="font-size: 24px !important;">visibility_off</span></button><p><i>^ If you really don't know how to answer the question, press this button and understand the code.</i></p>
             <div class="tip" id="t1" style="display:none;">
                 <p>
                     <i>
@@ -53,13 +48,46 @@
                     </i>
                     <br>
                     <pre class="prettyprint"><code class="language-js">
-    list.sort(function(a,b){return b-a});
-    console.log(list);
+    console.log('Hi');
     <code></pre>
                 </p>
             </div>
         </div>
         <hr>
+        <p><i>After you answer the question, press submit to test your code.</i></p>
+        <p>Lets try one! </p>
+        <hr>
+        </div>
+        <div class="question">
+            <h1>Output</h1>
+            <c>Basic JavaScript</c>
+            <p>Ouput 'Hi' to the console.</p>
+            <p><i>Use console.log() to output the result.</i></p>
+            <hr>
+            <p>Tips</p>
+            <div class="tip">
+                <p>
+                    <i>
+                        If you want to output a string, '' or "" are needed.
+                    </i>
+                </p>
+                <button onclick="open_tips(this, 't2')" class="tipsOn"><span class="material-icons-round" style="font-size: 24px !important;">visibility_off</span></button>
+                <div class="tip" id="t2" style="display:none;">
+                    <p>
+                        <i>
+                            The code is here:
+                            <br>
+                            <d>DO NOT ONLY COPY BUT ALSO UNDERSTAND THE CODE.</d>
+                        </i>
+                        <br>
+                        <pre class="prettyprint"><code class="language-js">
+    console.log('Hi');
+        <code></pre>
+                    </p>
+                </div>
+            </div>
+            <hr>
+        </div>
     </div>
     <div class="answer">
         <textarea id="editor">/*Use JavaScript to answer the question here*/
@@ -86,12 +114,9 @@
     </script>
     <script>
         const testing_values = [
-            `var list=[40,50,15,90,70,80,60,10,20,30];`,
-            `var list=[50,20,500,100,900,55,555,6454,112,22,33];`,
-            `var list=[1,2,3,4,5,6,7,8,9,10];`,
-            `var list=[50,40,952,812,64,2132,8469,5423,12,22,33];`,
+            `//`
         ];
-        const result = `[[90,80,70,60,50,40,30,20,15,10],[6454,900,555,500,112,100,55,50,33,22,20],[10,9,8,7,6,5,4,3,2,1],[8469,5423,2132,952,812,64,50,40,33,22,12]]`;
+        const result = `["Hi"]`;
         dt = '../../testScript.html'
         $('#submit').click(function() {
             if (location.href.includes('?')) {

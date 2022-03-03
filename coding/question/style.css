@@ -6,6 +6,10 @@ body{
     margin: 0 10vw;
 }
 
+*{
+    outline: none;
+}
+
 @font-face {
     font-family: 'Consolas';
     src: url(../../font/consola.ttf);
@@ -123,6 +127,7 @@ hr{
 .tip{
     background: #f3f3f3;
     padding: 20px;
+    border-radius: 10px;
 }
 
 button{
@@ -139,4 +144,20 @@ button{
 
 a{
     text-decoration: none;
+}
+
+br{
+    user-select: none;
+}
+
+::selection{
+    background: rgba(0, 191, 255, 0.1);
+}
+
+::-moz-selection{
+    background: rgba(0, 191, 255, 0.1);
+}
+
+::-webkit-selection{
+    background: rgba(0, 191, 255, 0.1);
 }

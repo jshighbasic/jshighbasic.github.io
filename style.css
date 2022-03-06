@@ -1,0 +1,116 @@
+*{
+    -webkit-user-drag: none;
+}
+
+body{
+    height: 1000vh;
+}
+
+#icon, #icona{
+    height: 80vh;
+    max-width: 80vw;
+}
+
+::selection{
+    background: #f1592a;
+    color: #fff;
+}
+
+::-moz-selection{
+    background: #f1592a;
+    color: #fff;
+}
+
+::-webkit-selection{
+    background: #f1592a;
+    color: #fff;
+}
+
+.imgsrc{
+    -webkit-user-drag: none;
+    width: 80vw;
+    max-width: 700px;
+    vertical-align: middle;
+}
+
+font{
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 50px;
+    vertical-align: middle;
+    transition: 1s;
+}
+
+.img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 200px;
+}
+
+@keyframes icon {
+    0%{
+        opacity: 0;
+        transform: rotate3d(0, 1, 0, -45deg);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+}
+
+br{
+    user-select: none;
+}
+
+c1 {
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    font-size: 48px;
+    color: #fff;
+    letter-spacing: -0.3px;
+    
+    background-image: linear-gradient(75deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 1) 33.33%, rgba(255, 255, 255, 0) 66.67%, rgba(255, 255, 255, 0) 100%);
+    background-size: 300% 100%;
+    background-position-x: calc(100% - var(--percentage));
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  a{
+    text-decoration: none;
+    color: #f1592a;
+  }
+
+  .sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+  }
+  
+  c1 {
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+    font-size: 48px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    background-image: linear-gradient(75deg, rgb(169, 182, 226) 0%, rgb(169, 182, 226) 33.33%, rgba(169, 182, 226, 0) 66.67%, rgba(169, 182, 226, 0) 100%);
+    background-size: 300% 100%;
+    background-position-x: calc(100% - var(--percentage));
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }

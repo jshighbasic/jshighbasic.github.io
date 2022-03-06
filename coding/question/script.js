@@ -1,9 +1,3 @@
-var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
-    mode: "javascript",
-    lineNumbers: true,
-    theme: "dracula"
-});
-
 try {
     location.href.includes('&script=') ? editor.setValue(decodeURIComponent(location.href.split('&script=')[1])) : '';
     location.href.includes('?error=') ? $('#error').html(`<span class="material-icons-round warn">warning</span>&nbsp;${decodeURIComponent(location.href.split('?error=')[1].split('&script=')[0])}`) : '';

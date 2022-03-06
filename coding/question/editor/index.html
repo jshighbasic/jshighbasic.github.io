@@ -25,7 +25,17 @@
         <hr>
     </div>
     <div class="answer">
-        <textarea id="editor">/*JavaScript here*/
+        <textarea id="editor">// XchuangC JavaScript Hight Basic Editor.
+/*
+      _________     _________      _________     ___________     _________     ________
+   · |  _______|   |  _____  \    |___   ___|   |____   ____|   |  _____  |   |  ____  \
+   · | |           | |     \  \       | |            | |        | |     | |   | |____|  |
+   · | |_______    | |      | |       | |            | |        | |     | |   |  _   __/
+   · |  _______|   | |      | |       | |            | |        | |     | |   | | \ \  
+   · | |           | |      | |       | |            | |        | |     | |   | |  \ \
+   · | |_______    | |_____/  /    ___| |___         | |        | |_____| |   | |   \ \     _
+   · |_________|   |_________/    |_________|        |_|        |_________|   |_|    \_\   |_|
+*/ 
 </textarea>
         <center><button id="submit">Submit</button></center>
         <div id="error"><span class="material-icons-round done">done</span></div>
@@ -40,6 +50,13 @@
     <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.35.0/codemirror.js'></script>
     <script src='https://codemirror.net/mode/javascript/javascript.js'></script>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+            mode: "javascript",
+            lineNumbers: true,
+            theme: "dracula"
+        });
+    </script>    
     <script>
         dt = '../../testScript.html'
         $('#submit').click(function() {

@@ -151,13 +151,16 @@ br{
 }
 
 ::selection{
-    background: rgba(0, 191, 255, 0.1);
+    background: #f1592a;
+    color: #fff;
 }
 
 ::-moz-selection{
-    background: rgba(0, 191, 255, 0.1);
+    background: #f1592a;
+    color: #fff;
 }
 
 ::-webkit-selection{
-    background: rgba(0, 191, 255, 0.1);
+    background: #f1592a;
+    color: #fff;
 }

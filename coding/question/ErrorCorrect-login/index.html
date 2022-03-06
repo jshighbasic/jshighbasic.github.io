@@ -135,6 +135,13 @@ login();
     <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.35.0/codemirror.js'></script>
     <script src='https://codemirror.net/mode/javascript/javascript.js'></script>
     <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+            mode: "javascript",
+            lineNumbers: true,
+            theme: "dracula"
+        });
+    </script>
+    <script>
         const testing_values = [
             `var json=[{username:'After',password:'a156'},{username:'Nice',password:'z987'}]; var userInput=['After','a156'];`,
             `var json=[{username:'Before',password:'b165'},{username:'Ken',password:'x456'}]; var userInput=['Ken','x456'];`,

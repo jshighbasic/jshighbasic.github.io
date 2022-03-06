@@ -90,10 +90,17 @@
         }
         
         h {
-            margin-top: 10px;
             font-size: 40px;
-            color: #f1592a;
-            font-weight: 100;
+            font-weight: 300;
+            margin-left: 50px;
+            color: rgb(255, 0, 0);
+            transition: .3s;
+            background: transparent;
+        }
+        
+        h:hover {
+            color: rgb(0, 0, 0);
+            background: #efefef;
         }
         
         i {
@@ -143,12 +150,9 @@
     </style>
     <style>
         /*
-
             Name:       dracula
             Author:     Michael Kaminsky (http://github.com/mkaminsky11)
-
             Original dracula color scheme by Zeno Rocha (https://github.com/zenorocha/dracula-theme)
-
         */
         
         .cm-s-dracula.CodeMirror,
@@ -271,83 +275,20 @@
         }
     </style>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <h1>Home page</h1>
+    <p>Sorry, this page cannot be opened as we are building it.</p>
     <p><i>XchuangC <c>JavaScript High Basic</c></i></p>
-        <hr>
-        <p>JavaScript</p>
-        <p><i>
-            To answer these questions, you should learn some basic JavaScript.
-        </i></p>
-        <br><br>
-        <center>
-            <img src="https://starwes.github.io/assets/XC.svg" id="icona" style="opacity: 0;">
-            <img src="https://starwes.github.io/assets/XC.svg" id="icon" style="display: none;">
-        </center>
-        <center class="img" id="i1">
-            <img src="assets/svgs/MacBook.svg" class="imgsrc">
-            <font>Editor</font>
-            <p>Nice looking · Functional · Fast</p>
-        </center>
-        <center class="img" id="i2"=>
-            <font>Introduction</font>
-            <img src="assets/svgs/MacBook (1).svg" class="imgsrc">
-            <p>Fast · Detailed · Simple</p>
-        </center>
-        <center class="img" id="i3"=>
-            <img src="assets/svgs/MacBook (2).svg" class="imgsrc">
-            <font>UI</font>
-            <p>Beautiful · Diverse</p>
-        </center>
-        <center class="img" id="i4"=>
-            <font>Question</font>
-            <img src="assets/svgs/MacBook (3).svg" class="imgsrc">
-            <p>Concise · Detailed</p>
-        </center>
-        <center id="i5">
-            <hr>
-            <h><c><a href="coding/">Questions</a></c></h>
-            <br><br>
-            <h><c><a href="mailto:jshighbasic@gmail.com">Contract</a></c></h>
-        </center>
-        <center id="footer">
-            <tr><br><br>
-                <a style="color:rgb(0, 0, 0);">&copy;XchuangC, 2022. All Rights Reserved.</a>
-                <hr><img src="https://starwes.github.io/assets/XC.svg" height="60px" style="background:white; padding:20px;"><br><text>Part of Xchuangc(Xcfo) family.</text>
-                <br>
-            </tr>
-        </center>
-        <div class="sticky">
-            <c1>XchuangC JavaScript High Basic.
-            </c1>
-        </div>
-        <script>
-            const h1 = document.querySelector('c1')
-
-            document.addEventListener('scroll', (e) => {
-                if(document.documentElement.scrollTop > 4000){
-                    let scrolled = (document.documentElement.scrollTop - 4000) / (document.documentElement.scrollHeight - document.documentElement.clientHeight - 12000)
-                    h1.style.setProperty('--percentage', `${scrolled * 100}%`)
-                }
-                else{
-                    h1.style.setProperty('--percentage', `${0 * 100}%`)
-                }
-            })
-        </script>
-        <script>
-            var an1 = false;
-            window.onscroll = function() {
-                if(document.documentElement.scrollTop > 150 && !an1) {
-                    document.getElementById("icon").style.display = "block";
-                    document.getElementById("icona").style.display = "none";
-                    document.getElementById("icon").style.animation = 'icon 1s';
-                    an1 = true;
-                }
-            };
-        </script>
+    <p id="Message">
+    </p>
+    <pre class="prettyprint"><code class="language-js">
+    $('#Message').html('&lt;span class="material-icons-round">build&lt;/span>Building this page...');
+    <br><code></pre>
+    <script>
+        $('#Message').html('<span class="material-icons-round">build</span>Building this page...');
+    </script>
 </body>
 
 </html>

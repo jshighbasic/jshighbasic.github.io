@@ -287,33 +287,33 @@
             <img src="https://starwes.github.io/assets/XC.svg" id="icona" style="opacity: 0;">
             <img src="https://starwes.github.io/assets/XC.svg" id="icon" style="display: none;">
         </center>
-        <center class="img" id="i1">
+        <center class="img" id="i1" style="display: none;" onclick="top.location = 'coding/question/editor'">
             <img src="assets/svgs/MacBook.svg" class="imgsrc">
             <font>Editor</font>
             <p>Nice looking · Functional · Fast</p>
         </center>
-        <center class="img" id="i2"=>
+        <center class="img" id="i2" style="display: none;" onclick="top.location = 'coding/question/introduction'">
             <font>Introduction</font>
             <img src="assets/svgs/MacBook (1).svg" class="imgsrc">
             <p>Fast · Detailed · Simple</p>
         </center>
-        <center class="img" id="i3"=>
+        <center class="img" id="i3" style="display: none;">
             <img src="assets/svgs/MacBook (2).svg" class="imgsrc">
             <font>UI</font>
             <p>Beautiful · Diverse</p>
         </center>
-        <center class="img" id="i4"=>
-            <font>Question</font>
+        <center class="img" id="i4" style="display: none;">
+            <font>Questions</font>
             <img src="assets/svgs/MacBook (3).svg" class="imgsrc">
             <p>Concise · Detailed</p>
         </center>
-        <center id="i5">
+        <center id="i5" style="display: none;">
             <hr>
             <h><c><a href="coding/">Questions</a></c></h>
             <br><br>
             <h><c><a href="mailto:jshighbasic@gmail.com">Contract</a></c></h>
         </center>
-        <center id="footer">
+        <center id="footer" style="display: none;">
             <tr><br><br>
                 <a style="color:rgb(0, 0, 0);">&copy;XchuangC, 2022. All Rights Reserved.</a>
                 <hr><img src="https://starwes.github.io/assets/XC.svg" height="60px" style="background:white; padding:20px;"><br><text>Part of Xchuangc(Xcfo) family.</text>
@@ -339,6 +339,12 @@
         </script>
         <script>
             var an1 = false;
+            var an2 = false;
+            var an3 = false;
+            var an4 = false;
+            var an5 = false;
+            var an6 = false;
+            var an7 = false;
             window.onscroll = function() {
                 if(document.documentElement.scrollTop > 150 && !an1) {
                     document.getElementById("icon").style.display = "block";
@@ -346,6 +352,37 @@
                     document.getElementById("icon").style.animation = 'icon 1s';
                     an1 = true;
                 }
+                if(document.documentElement.scrollTop > 800 && !an2) {
+                    document.getElementById("i1").style.display = "block";
+                    document.getElementById("i1").style.animation = 'fadeinandcomeformleft 1s';
+                    an2 = true;
+                }
+                if(document.documentElement.scrollTop > 1500 && !an3) {
+                    document.getElementById("i2").style.display = "block";
+                    document.getElementById("i2").style.animation = 'fadeinandcomeformright 1s';
+                    an3 = true;
+                }
+                if(document.documentElement.scrollTop > 1800 && !an4) {
+                    document.getElementById("i3").style.display = "block";
+                    document.getElementById("i3").style.animation = 'fadeinandcomeformleftbottom 2s';
+                    an4 = true;
+                }
+                if(document.documentElement.scrollTop > 2500 && !an5) {
+                    document.getElementById("i4").style.display = "block";
+                    document.getElementById("i4").style.animation = 'fadeinandcomeformrighttop 1s';
+                    an5 = true;
+                }
+                if(document.documentElement.scrollTop > 3200 && !an6) {
+                    document.getElementById("i5").style.display = "block";
+                    document.getElementById("i5").style.animation = 'fadein 1s';
+                    an6 = true;
+                }
+                if(document.documentElement.scrollTop > 3600 && !an7) {
+                    document.getElementById("footer").style.display = "block";
+                    document.getElementById("footer").style.animation = 'fadein 1s';
+                    an7 = true;
+                }
+
             };
         </script>
 </body>

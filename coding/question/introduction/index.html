@@ -127,7 +127,51 @@
             location.href = `${dt}?dt=${url}&script=${editor.getValue().replaceAll('\n','%0A')}&testval=${testing_values}`;
         });
     </script>
-    <script src="../script.js"></script>
+    <script>
+    try {
+        location.href.includes('&script=') ? editor.setValue(decodeURIComponent(location.href.split('&script=')[1])) : '';
+        location.href.includes('?error=') ? $('#error').html(`<span class="material-icons-round warn">warning</span>&nbsp;${decodeURIComponent(location.href.split('?error=')[1].split('&script=')[0])}`) : '';
+        if (location.href.includes('?success=t') && localStorage.getItem(location.href.split('token=')[1].split('&')[0]) == result) {
+            $('#error').html(`<span class="material-icons-round">thumb_up_alt</span>Congratulations!</h><br>You have passed the test as the end of the introduction!<br><p><i>Click <a href='../'>HERE</a> to go back and start answering questions!</i></p>`);
+        } else if (localStorage.getItem(location.href.split('token=')[1].split('&')[0]) != result) {
+            $('#error').html(`<span class="material-icons-round warn">dangerous</span>Wrong answer: <br>Output:<br>${localStorage.getItem(location.href.split('token=')[1].split('&')[0])}`);
+        }
+    } catch (e) {
+        console.log(e);
+    }
+    var open_tip = false;
+    function open_tips(e, num='t1') {
+        if(num=='t1'){
+            if (!open_tip) {
+                $('#t1').css('display', 'block');
+                open_tip = true;
+                e.innerHTML = `<span class="material-icons-round" style="font-size: 24px !important;">visibility</span>`;
+            } else {
+                $('#t1').css('display', 'none');
+                open_tip = false;
+                e.innerHTML = `<span class="material-icons-round" style="font-size: 24px !important;">visibility_off</span>`;
+            }
+        }
+        else if(num=='t2'){
+            if (!open_tip) {
+                $('#t2').css('display', 'block');
+                open_tip = true;
+                e.innerHTML = `<span class="material-icons-round" style="font-size: 24px !important;">visibility</span>`;
+            } else {
+                $('#t2').css('display', 'none');
+                open_tip = false;
+                e.innerHTML = `<span class="material-icons-round" style="font-size: 24px !important;">visibility_off</span>`;
+            }
+        }
+    }
+    window.onload = function() {
+        var offset = sessionStorage.getItem("offsetTop");
+        window.scrollTo(0, offset);
+        window.onscroll = function() {
+            sessionStorage.setItem("offsetTop", document.documentElement.scrollTop);
+        };
+    };
+    </script>
 </body>
 
 </html>
